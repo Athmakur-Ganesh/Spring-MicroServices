@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: Loan-Processing-Service 
+    
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:2020/eureka 
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*" 
+       
+server:
+  port: 2022
+
