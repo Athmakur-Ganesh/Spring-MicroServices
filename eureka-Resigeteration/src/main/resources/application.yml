@@ -1,0 +1,21 @@
+server:
+  port: 2020
+  
+spring:
+  application:
+   name: eurka-registry
+   
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:2020/eureka      
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*" 
+          
