@@ -1,0 +1,29 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:D:/JAVA SOFTWARE/H2 DataBase/sample 
+    username: sa
+    password: 
+  application:
+    name: Cibli-Score-Service 
+    
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:2020/eureka 
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*" 
+       
+server:
+  port: 2021
